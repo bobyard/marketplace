@@ -5,12 +5,16 @@ import './index.css'
 import './suiet-wallet-kit-custom.css'
 import Header from "./Header";
 import {WalletProvider} from "@suiet/wallet-kit";
+import Footer from "./Footer";
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
         <WalletProvider>
-            <Header/>
-            <App/>
+            <div className="min-h-screen flex flex-col">
+                <Header />
+                <App/>
+                <Footer/>
+            </div>
         </WalletProvider>
     </React.StrictMode>,
 );
