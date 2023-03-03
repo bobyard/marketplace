@@ -8,6 +8,7 @@ import {WalletProvider} from "@suiet/wallet-kit";
 import Footer from "./Footer";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Profile from "./Profile";
+import Collection from "./Collection";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
     {
         path: "/profile",
         element: <Profile/>,
+    },
+    {
+        path: "/collection",
+        element: <Collection/>,
     },
 ]);
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

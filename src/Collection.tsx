@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import {devnetConnection, JsonRpcProvider} from "@mysten/sui.js";
 import {GetObjectDataResponse} from "@mysten/sui.js/src/types";
 
-function Profile() {
+function Collection() {
     const wallet = useWallet();
     let [items, setItems] = useState<GetObjectDataResponse[]>();
     useEffect(() => {
@@ -36,7 +36,7 @@ function Profile() {
                     <h2 className="card-title">{item.details?.data.fields.name}</h2>
                     <p>{item.details?.data.fields.description}</p>
                     <div className="card-actions">
-                        <button className="btn btn-primary">List Now</button>
+                        <button className="btn btn-primary">Buy Now</button>
                     </div>
                 </div>
             </div>
@@ -59,4 +59,4 @@ function Profile() {
 
 }
 
-export default Profile
+export default Collection;
