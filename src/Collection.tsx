@@ -2,11 +2,10 @@ import './App.css'
 import {useWallet} from "@suiet/wallet-kit";
 import {useEffect, useState} from "react";
 import {devnetConnection, JsonRpcProvider} from "@mysten/sui.js";
-import {GetObjectDataResponse} from "@mysten/sui.js/src/types";
 
 function Collection() {
     const wallet = useWallet();
-    let [items, setItems] = useState<GetObjectDataResponse[]>();
+    let [items, setItems] = useState<any[]>();
     useEffect(() => {
         const provider = new JsonRpcProvider(devnetConnection);
         if (wallet.address !== undefined) {
@@ -20,7 +19,7 @@ function Collection() {
     }, [wallet.connected])
     console.log(items);
 
-    function parseIPFS(item: GetObjectDataResponse) {
+    function parseIPFS(item: any) {
         let url: string = item.details.data.fields.url;
         return url.replace("ipfs://", "https://bobyard.infura-ipfs.io/ipfs/");
     }

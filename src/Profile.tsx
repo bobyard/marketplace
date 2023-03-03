@@ -6,7 +6,7 @@ import {GetObjectDataResponse} from "@mysten/sui.js/src/types";
 
 function Profile() {
     const wallet = useWallet();
-    let [items, setItems] = useState<GetObjectDataResponse[]>();
+    let [items, setItems] = useState<any[]>();
     useEffect(() => {
         const provider = new JsonRpcProvider(devnetConnection);
         if (wallet.address !== undefined) {
@@ -21,6 +21,7 @@ function Profile() {
     console.log(items);
 
     function parseIPFS(item: GetObjectDataResponse) {
+        // @ts-ignore
         let url: string = item.details.data.fields.url;
         return url.replace("ipfs://", "https://bobyard.infura-ipfs.io/ipfs/");
     }
