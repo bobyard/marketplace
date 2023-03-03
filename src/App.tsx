@@ -1,6 +1,11 @@
 import './App.css'
 
 function App() {
+
+    /**
+     * let {id} = useParams();
+     * console.log();
+     */
     const cards = Array.from(new Array(8))
         .map(() =>
             <div className="w-full sm:w-1/2 md:w-1/4 mb-4 px-2">
