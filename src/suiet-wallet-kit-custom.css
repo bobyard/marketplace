@@ -328,6 +328,7 @@
 }
 
 .wkit-connected-container {
+    z-index: 999;
     position: relative;
     width: var(--wkit-button-width);
     background-color: rgba(var(--wkit-bg-rgb), 1);

@@ -7,12 +7,12 @@ function App() {
      * console.log();
      */
     const cards = Array.from(new Array(8))
-        .map(() =>
-            <div className="w-full sm:w-1/2 md:w-1/4 mb-4 px-2">
+        .map((index) =>
+            <div className="w-full sm:w-1/2 md:w-1/4 mb-4 px-2" key={index}>
                 <div className="card w-96 bg-base-100 shadow-xl  mb-4 px-2">
                     <figure className="px-10 pt-10">
-                        <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-                             className="rounded-xl"/>
+                        <img src="https://bobyard.infura-ipfs.io/ipfs/QmZPWWy5Si54R3d26toaqRiqvCH7HkGdXkxwUgCm2oKKM2?filename=img-sq-01.png" alt="Shoes"
+                             className="object-cover h-48 w-96 rounded-xl"/>
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">Shoes!</h2>
